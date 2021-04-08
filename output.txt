@@ -1,0 +1,19 @@
+CreateTicket.c(59): Price 1= 350
+CreateTicket.c(60): Price 2= 312
+CreateTicket.c(61): Price 3= 331
+CreateTicket.c(62): Price 4= 286
+CreateTicket.c(70): ticket1 = 350
+CreateTicket.c(71): ticket2 = 312
+CreateTicket.c(72): ticket3 = 331
+CreateTicket.c(73): ticket4 = 286
+CreateTicket.c(80): OFlight1 = 920;350;04/08/2021
+CreateTicket.c(81): OFlight2 = 921;312;04/08/2021
+CreateTicket.c(82): OFlight3 = 922;331;04/08/2021
+CreateTicket.c(83): OFlight4 = 923;286;04/08/2021
+CreateTicket.c(96): Билет есть
+CreateTicket.c(100): True Ticket = 920;350;04/08/2021
+CreateTicket.c(100): True Ticket = 921;312;04/08/2021
+CreateTicket.c(100): True Ticket = 923;286;04/08/2021
+CreateTicket.c(106): Рандомный элемент = 2
+CreateTicket.c(107): Выбран этот билет = 921;312;04/08/2021
+Vuser Terminated.
