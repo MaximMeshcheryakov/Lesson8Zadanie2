@@ -1,5 +1,9 @@
 vuser_end()
 {
+	
+	tName = "7.Log_out_2";
+	lr_start_transaction(tName);
+	
 	/* Sign Off */
 
 	web_url("SignOff Button", 
@@ -11,6 +15,8 @@ vuser_end()
 		"Snapshot=t5.inf", 
 		"Mode=HTML", 
 		LAST);
+
+	end_transaction(tName, status);	
 	
 	return 0;
 }

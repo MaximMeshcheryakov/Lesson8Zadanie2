@@ -1,5 +1,8 @@
-CreateTicket()
+CreateTicket2()
 {
+	tName = "03.OpenPage_ticket_FindFlight_2";
+	lr_start_transaction(tName);	
+
 	/* Flights */
 
 	web_url("Search Flights Button", 
@@ -12,6 +15,13 @@ CreateTicket()
 		"Mode=HTML", 
 		LAST);
 
+	
+	end_transaction(tName, status);
+	
+	tName = "04.Create_ticket_FindFlight_2";
+	lr_start_transaction(tName);
+		
+	
 	web_reg_save_param_ex(
 		"ParamName=OFlight",
     	"LB=name=\"outboundFlight\" value=\"",
@@ -56,10 +66,16 @@ CreateTicket()
 		"Name=findFlights.y", "Value=10", ENDITEM, 
 		LAST);
 	
-	lr_output_message("Price 1= %d",atoi(lr_eval_string("{PriceTickets_1}")));
-	lr_output_message("Price 2= %d",atoi(lr_eval_string("{PriceTickets_2}")));
-	lr_output_message("Price 3= %d",atoi(lr_eval_string("{PriceTickets_3}")));
-	lr_output_message("Price 4= %d",atoi(lr_eval_string("{PriceTickets_4}")));
+		
+	end_transaction(tName, status);
+
+	tName = "05.Create_ticket_ChooseCost_2";
+	lr_start_transaction(tName);
+	
+//	lr_output_message("Price 1= %d",atoi(lr_eval_string("{PriceTickets_1}")));
+//	lr_output_message("Price 2= %d",atoi(lr_eval_string("{PriceTickets_2}")));
+//	lr_output_message("Price 3= %d",atoi(lr_eval_string("{PriceTickets_3}")));
+//	lr_output_message("Price 4= %d",atoi(lr_eval_string("{PriceTickets_4}")));
 	
 	
 	ticket[1]=atoi(lr_eval_string("{PriceTickets_1}"));
@@ -67,20 +83,21 @@ CreateTicket()
 	ticket[3]=atoi(lr_eval_string("{PriceTickets_3}"));
 	ticket[4]=atoi(lr_eval_string("{PriceTickets_4}"));
 	
-	lr_output_message("ticket1 = %d",ticket[1]);
-	lr_output_message("ticket2 = %d",ticket[2]);
-	lr_output_message("ticket3 = %d",ticket[3]);
-	lr_output_message("ticket4 = %d",ticket[4]);
+//	lr_output_message("ticket1 = %d",ticket[1]);
+//	lr_output_message("ticket2 = %d",ticket[2]);
+//	lr_output_message("ticket3 = %d",ticket[3]);
+//	lr_output_message("ticket4 = %d",ticket[4]);
+	//lr_think_time(3);
 	
 	flight[1]=lr_eval_string("{OFlight_1}");
 	flight[2]=lr_eval_string("{OFlight_2}");
 	flight[3]=lr_eval_string("{OFlight_3}");
 	flight[4]=lr_eval_string("{OFlight_4}");
 	
-	lr_output_message("OFlight1 = %s",flight[1]);
-	lr_output_message("OFlight2 = %s",flight[2]);
-	lr_output_message("OFlight3 = %s",flight[3]);
-	lr_output_message("OFlight4 = %s",flight[4]);
+//	lr_output_message("OFlight1 = %s",flight[1]);
+//	lr_output_message("OFlight2 = %s",flight[2]);
+//	lr_output_message("OFlight3 = %s",flight[3]);
+//	lr_output_message("OFlight4 = %s",flight[4]);
 	
 	for(i;i<=4;i++){
 		if(ticket[i]%2==0){
@@ -90,21 +107,21 @@ CreateTicket()
 	}
 	
 	if(j==0){
-		lr_output_message("Билета нет");
+//		lr_output_message("Билета нет");
 	} else{
 	
-	lr_output_message("Билет есть");
+//	lr_output_message("Билет есть");
 	
 	i = 1;
 	for(i;i<k;i++){
-		lr_output_message("True Ticket = %s",trueticket[i]);
+//		lr_output_message("True Ticket = %s",trueticket[i]);
 	}
 
 	srand(time(NULL));
   	randomT = rand() % j + 1;
   	lr_save_string(trueticket[randomT],"true");
- 	lr_output_message("Рандомный элемент = %d",randomT);
- 	lr_output_message("Выбран этот билет = %s",trueticket[randomT]);
+// 	lr_output_message("Рандомный элемент = %d",randomT);
+// 	lr_output_message("Выбран этот билет = %s",trueticket[randomT]);
 	
 	web_submit_data("reservations.pl_2", 
 		"Action={Host}/cgi-bin/reservations.pl", 
@@ -125,6 +142,14 @@ CreateTicket()
 		LAST);
 	
 
+
+	end_transaction(tName, status);
+
+	tName = "06.Create_ticket_PaymentDetail_2";
+	lr_start_transaction(tName);
+	
+
+
 	/* Continue 3 */
 	
 	web_submit_data("reservations.pl_3", 
@@ -136,11 +161,11 @@ CreateTicket()
 		"Snapshot=t6.inf", 
 		"Mode=HTML", 
 		ITEMDATA, 
-		"Name=firstName", "Value=Jojo", ENDITEM, 
+		"Name=firstName", "Value=Batman", ENDITEM, 
 		"Name=lastName", "Value=Bean", ENDITEM, 
 		"Name=address1", "Value=", ENDITEM, 
 		"Name=address2", "Value=", ENDITEM, 
-		"Name=pass1", "Value=Jojo Bean", ENDITEM, 
+		"Name=pass1", "Value=Batman Bean", ENDITEM, 
 		"Name=creditCard", "Value=", ENDITEM, 
 		"Name=expDate", "Value=", ENDITEM, 
 		"Name=oldCCOption", "Value=", ENDITEM, 
@@ -157,5 +182,10 @@ CreateTicket()
 		LAST);
 
 	}
+	
+		end_transaction(tName, status);
+	
+	
+	
 	return 0;
 }

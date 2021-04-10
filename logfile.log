@@ -1,3 +1,4 @@
-c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket.c:27: warning: unrecognized character escape sequence `\/'
-c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket.c:85: warning: expression with no effect elided
-c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket.c:99: warning: expression with no effect elided
+c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: globals.h:38: warning: missing return value
+c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket2.c:37: warning: unrecognized character escape sequence `\/'
+c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket2.c:102: warning: expression with no effect elided
+c:\users\rejaketi\documents\vugen\scripts\mlesson8_2\\pre_cci.c: CreateTicket2.c:116: warning: expression with no effect elided

@@ -1,0 +1,1 @@
+CreateTicket.c(8): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "http://localhost:1080/cgi-bin/nav.pl?page=menu&in=flights"  	[MsgId: MERR-26612]

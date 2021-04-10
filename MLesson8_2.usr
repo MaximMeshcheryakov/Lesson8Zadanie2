@@ -24,7 +24,7 @@ Description=
 ScriptLocale=ru-RU
 [Actions]
 vuser_init=vuser_init.c
-CreateTicket=CreateTicket.c
+CreateTicket2=CreateTicket2.c
 vuser_end=vuser_end.c
 [RunLogicFiles]
 Default Profile=default.usp
@@ -36,19 +36,19 @@ Default Profile=default.cfg
 globals.h=
 [Modified Actions]
 vuser_init=1
-CreateTicket=1
+CreateTicket2=1
 vuser_end=1
 [Recorded Actions]
 vuser_init=0
-CreateTicket=0
+CreateTicket2=0
 vuser_end=0
 [Replayed Actions]
 vuser_init=1
-CreateTicket=1
+CreateTicket2=1
 vuser_end=1
 [Interpreters]
 vuser_init=cci
-CreateTicket=cci
+CreateTicket2=cci
 vuser_end=cci
 [TransactionsOrder]
 Order=

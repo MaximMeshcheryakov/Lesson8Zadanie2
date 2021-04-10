@@ -1,32 +1,85 @@
 [
     {
-        "actionName": "CreateTicket",
+        "actionName": "CreateTicket2",
         "steps": [
             {
-                "stepId": "STEP3",
-                "stepName": "Url: Search Flights Button",
-                "infFile": "t3.inf",
-                "time": 1617882327440
-            },
-            {
-                "stepId": "STEP4",
-                "stepName": "Submit Data: reservations.pl",
-                "infFile": "t4.inf",
-                "time": 1617882327559
-            },
-            {
                 "stepId": "STEP5",
-                "stepName": "Submit Data: reservations.pl_2",
+                "stepName": "Url: Search Flights Button",
                 "infFile": "t5.inf",
-                "time": 1617882328564
+                "time": 1618044198918
             },
             {
                 "stepId": "STEP6",
-                "stepName": "Submit Data: reservations.pl_3",
+                "stepName": "Custom Request: InfluxDB",
                 "infFile": "t6.inf",
-                "time": 1617882328683
+                "time": 1618044198985
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Submit Data: reservations.pl",
+                "infFile": "t7.inf",
+                "time": 1618044199140
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Custom Request: InfluxDB",
+                "infFile": "t8.inf",
+                "time": 1618044199215
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Submit Data: reservations.pl_2",
+                "infFile": "t9.inf",
+                "time": 1618044199972
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Custom Request: InfluxDB",
+                "infFile": "t10.inf",
+                "time": 1618044200037
+            },
+            {
+                "stepId": "STEP11",
+                "stepName": "Submit Data: reservations.pl_3",
+                "infFile": "t11.inf",
+                "time": 1618044200150
+            },
+            {
+                "stepId": "STEP12",
+                "stepName": "Custom Request: InfluxDB",
+                "infFile": "t12.inf",
+                "time": 1618044200262
             }
         ],
-        "transactions": []
+        "transactions": [
+            {
+                "transactionName": "03.OpenPage_ticket_FindFlight_2",
+                "rawStartTime": 1618044198640,
+                "rawEndTime": 1618044198924,
+                "thinkTime": 0.0,
+                "wastedTime": 0.009253978729248047
+            },
+            {
+                "transactionName": "04.Create_ticket_FindFlight_2",
+                "rawStartTime": 1618044199017,
+                "rawEndTime": 1618044199143,
+                "thinkTime": 0.0,
+                "wastedTime": 0.005007266998291016
+            },
+            {
+                "transactionName": "05.Create_ticket_ChooseCost_2",
+                "rawStartTime": 1618044199237,
+                "rawEndTime": 1618044199980,
+                "thinkTime": 0.0,
+                "wastedTime": 0.004771232604980469
+            },
+            {
+                "transactionName": "06.Create_ticket_PaymentDetail_2",
+                "rawStartTime": 1618044200060,
+                "rawEndTime": 1618044200156,
+                "thinkTime": 0.0,
+                "wastedTime": 0.005457401275634766
+            }
+        ]
     }
 ]

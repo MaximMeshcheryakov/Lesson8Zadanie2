@@ -1,7 +1,7 @@
 [Profile Actions]
 MercIniTreeFather=""
 MercIniTreeSectionName="Profile Actions"
-Profile Actions name=vuser_init,CreateTicket,vuser_end
+Profile Actions name=vuser_init,CreateTicket2,vuser_end
 [RunLogicEndRoot]
 MercIniTreeFather=""
 MercIniTreeSectionName="RunLogicEndRoot"
@@ -53,16 +53,23 @@ RunLogicObjectKind="Action"
 [RunLogicRunRoot]
 MercIniTreeFather=""
 MercIniTreeSectionName="RunLogicRunRoot"
-MercIniTreeSons="CreateTicket"
+MercIniTreeSons="CreateTicket2"
 Name="Run"
-RunLogicActionOrder="CreateTicket"
+RunLogicActionOrder="CreateTicket2"
 RunLogicActionType="VuserRun"
+RunLogicAfterPaceMax="90"
+RunLogicAfterPaceMin="60"
 RunLogicNumOfIterations="1"
 RunLogicObjectKind="Group"
+RunLogicPaceConstAfterTime="60"
+RunLogicPaceConstTime="40"
+RunLogicPaceType="Const"
+RunLogicRandomPaceMax="90"
+RunLogicRandomPaceMin="60"
 RunLogicRunMode="Sequential"
-[RunLogicRunRoot:CreateTicket]
+[RunLogicRunRoot:CreateTicket2]
 MercIniTreeFather="RunLogicRunRoot"
-MercIniTreeSectionName="CreateTicket"
-Name="CreateTicket"
+MercIniTreeSectionName="CreateTicket2"
+Name="CreateTicket2"
 RunLogicActionType="VuserRun"
 RunLogicObjectKind="Action"

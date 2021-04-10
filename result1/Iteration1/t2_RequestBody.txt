@@ -1,2 +1,1 @@
-"userSession=131055.676468206zHtVVHzpDfiDDDDDtAttHpAfiVf&username=jojo&password=bean&JSFormSubm"
-"it=off&login.x=54&login.y=9"
+"business_metrics,name=01.Login_open_field_2,status=0 response_time=1043"

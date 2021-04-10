@@ -6,15 +6,42 @@
                 "stepId": "STEP1",
                 "stepName": "Url: webtours",
                 "infFile": "t1.inf",
-                "time": 1617882327064
+                "time": 1618044197970
             },
             {
                 "stepId": "STEP2",
-                "stepName": "Submit Data: login.pl",
+                "stepName": "Custom Request: InfluxDB",
                 "infFile": "t2.inf",
-                "time": 1617882327254
+                "time": 1618044198074
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Submit Data: login.pl",
+                "infFile": "t3.inf",
+                "time": 1618044198556
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Custom Request: InfluxDB",
+                "infFile": "t4.inf",
+                "time": 1618044198617
             }
         ],
-        "transactions": []
+        "transactions": [
+            {
+                "transactionName": "01.Login_open_field_2",
+                "rawStartTime": 1618044196452,
+                "rawEndTime": 1618044197971,
+                "thinkTime": 0.0,
+                "wastedTime": 0.47576260566711428
+            },
+            {
+                "transactionName": "02.Login_fillin_fiels_2",
+                "rawStartTime": 1618044198076,
+                "rawEndTime": 1618044198557,
+                "thinkTime": 0.0,
+                "wastedTime": 0.013047456741333008
+            }
+        ]
     }
 ]
